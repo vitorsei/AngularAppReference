@@ -10,9 +10,15 @@
 
 //---------------------Uses $resource service----------------------
 eventsApp.factory('eventData', function ($resource) {
+    var resource = $resource('http://localhost:9000/Event/:id', { id: '@id' });
+
     return {
         getEvent: function () {
-            return $resource('http://localhost:18774/Event/:id', { id: '@id' }).get({ id: 1 });
+            return resource.get({ id: 1 });
+        },
+        save: function (event) {
+            event.id = 9999;
+            return resource.save(event);
         }
     };
 });
