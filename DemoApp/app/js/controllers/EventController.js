@@ -1,52 +1,23 @@
 ﻿'use strict';
 
 eventsApp.controller('EventController',
-    function EventController($scope) {
+    function EventController($scope, eventData, $log) {
 
-        $scope.snippet = '<span style="color: red"> hi there</span>';
-        $scope.boolValue = false;
-        $scope.myStyle = { color: 'red' };
-        $scope.myClass = "blue";
-        $scope.buttonDisabled = true;
+        $scope.sortOrder = 'name';
         
-        $scope.event = {
-            name: 'Angular Boot Camp',
-            date: '1/1/2013',
-            time: '10:30 am',
-            location: {
-                address: 'Google Headquartes',
-                city: 'Mountain View',
-                province: 'CA'
-            },
-            imageUrl: 'img/angularjs-logo.png',
-            sessions: [
-                {
-                    name: 'Directive Masterclass',
-                    creatorName: 'Bob Smith',
-                    duration: '4 hours',
-                    level: 'Advanced',
-                    abstract: 'In this session you will learn the ins and outs of directives!',
-                    upVoteCount: 0
+        //---------------------Uses $http service----------------------
+        //eventData.getEvent()
+        //    .success(function (event) { $scope.event = event; })
+        //    .error(function (data, status, heardes, config) {
+        //        $log.warn(data, status, heardes, config);
+        //    });
 
-                },
-                {
-                    name: 'Scopes for fun and profit',
-                    creatorName: 'Bob Smith',
-                    duration: '2 hours',
-                    level: 'Intermediate',
-                    abstract: 'In this session you will learn the ins and outs of directives!',
-                    upVoteCount: 0
-                },
-                {
-                    name: 'Well Behaved Controllers',
-                    creatorName: 'Bob Smith',
-                    duration: '8 hours',
-                    level: 'Beginner',
-                    abstract: 'In this session you will learn the ins and outs of directives!',
-                    upVoteCount: 0
-                }
-            ]
-        }
+        //---------------------Uses $resource service----------------------
+        //$scope.event = eventData.getEvent();
+        eventData.getEvent()
+            .$promise
+            .then(function (event) { $scope.event = event;})
+            .catch(function (response) { console.log(response); })
 
         $scope.upVoteSession = function (session) {
             session.upVoteCount++;
