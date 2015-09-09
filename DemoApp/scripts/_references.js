@@ -16,3 +16,4 @@
 /// <reference path="../app/js/controllers/editprofilecontroller.js" />
 /// <reference path="../app/js/services/gravatarurlbuilder.js" />
 /// <reference path="../app/js/services/eventdata.js" />
+/// <reference path="../app/js/controllers/cachesamplecontroller.js" />

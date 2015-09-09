@@ -106,8 +106,10 @@
     <Content Include="app\css\app.css" />
     <Content Include="app\css\bootstrap.min.css" />
     <Content Include="app\EditProfile.html" />
+    <Content Include="app\CacheSample.html" />
     <Content Include="app\js\controllers\EditProfileController.js" />
     <Content Include="app\js\controllers\EditEventController.js" />
+    <Content Include="app\js\controllers\CacheSampleController.js" />
     <Content Include="app\js\services\GravatarUrlBuilder.js" />
     <Content Include="app\js\services\EventData.js" />
     <Content Include="app\NewEvent.html" />
