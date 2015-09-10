@@ -103,6 +103,9 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\js\controllers\LocaleSampleController.js" />
+    <Content Include="app\lib\angular\angular-locale_es.js" />
+    <Content Include="app\LocaleSample.html" />
     <Content Include="app\css\app.css" />
     <Content Include="app\css\bootstrap.min.css" />
     <Content Include="app\EditProfile.html" />

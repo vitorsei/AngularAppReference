@@ -17,3 +17,5 @@
 /// <reference path="../app/js/controllers/editprofilecontroller.js" />
 /// <reference path="../app/js/services/gravatarurlbuilder.js" />
 /// <reference path="../app/js/filters.js" />
+/// <reference path="../app/js/controllers/localesamplecontroller.js" />
+/// <reference path="../app/lib/angular/angular-locale_es.js" />
