@@ -21,3 +21,5 @@
 /// <reference path="../app/lib/angular/angular-locale_es.js" />
 /// <reference path="../app/js/controllers/timeoutsamplecontroller.js" />
 /// <reference path="../app/js/controllers/filtersamplecontroller.js" />
+/// <reference path="../app/lib/angular/angular-cookies.js" />
+/// <reference path="../app/js/controllers/cookiestoresamplecontroller.js" />

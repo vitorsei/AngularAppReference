@@ -103,11 +103,14 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\CookieStoreSample.html" />
+    <Content Include="app\js\controllers\CookieStoreSampleController.js" />
     <Content Include="app\js\controllers\FilterSampleController.js" />
     <Content Include="app\js\controllers\TimeoutSampleController.js" />
     <Content Include="app\js\controllers\LocaleSampleController.js" />
     <Content Include="app\lib\angular\angular-locale_es.js" />
     <Content Include="app\FilterSample.html" />
+    <Content Include="app\lib\angular\angular-cookies.js" />
     <Content Include="app\TimeoutSample.html" />
     <Content Include="app\LocaleSample.html" />
     <Content Include="app\css\app.css" />
