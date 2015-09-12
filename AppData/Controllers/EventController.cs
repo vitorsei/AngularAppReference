@@ -14,16 +14,26 @@ namespace AppData.Controllers
     [EnableCors(origins: "http://localhost:18774", headers: "*", methods: "*")] 
     public class EventController : ApiController
     {
+        private readonly string path = System.Web.Hosting.HostingEnvironment.MapPath("/") + "App_Data/Event/";
+        
         public JToken Get(string id = null)
         {
-            var path = System.Web.Hosting.HostingEnvironment.MapPath("/");
-            return JObject.Parse(File.ReadAllText(path + "App_Data/Event/" + id + ".json"));
+            return JObject.Parse(File.ReadAllText(path + id + ".json"));
         }
 
-        public void Post(string id, JObject eventData)
+        public void Post(JObject eventData)
         {
-            var path = System.Web.Hosting.HostingEnvironment.MapPath("/");
-            File.WriteAllText(path + "App_Data/Event/" + id + ".json", eventData.ToString(Formatting.None));
+            File.WriteAllText(path + GetNewId() + ".json", eventData.ToString(Formatting.None));
+        }
+
+        private string GetNewId()
+        {
+            var lastId = Directory.GetFiles(path, "*.json")
+                                    .Select(x => Path.GetFileNameWithoutExtension(x)).Max();
+
+            int newId = int.Parse(lastId) + 1;
+            
+            return newId.ToString();
         }
     }
 }

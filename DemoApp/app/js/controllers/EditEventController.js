@@ -7,7 +7,7 @@ eventsApp.controller('EditEventController',
             if (newEventForm.$valid) {
                 eventData.save(event)
                     .$promise
-                    .then(function(response) { console.log('success', response)} )
+                    .then(function (response) { window.location = 'EventDetails.html'; })
                     .catch(function(response) { console.log('failure', response)} );
             }
         };
