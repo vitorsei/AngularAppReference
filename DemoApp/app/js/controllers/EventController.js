@@ -1,7 +1,7 @@
 ﻿'use strict';
 
 eventsApp.controller('EventController',
-    function EventController($scope, eventData, $anchorScroll) {
+    function EventController($scope, eventData, $anchorScroll, $cookieStore) {
 
         $scope.sortOrder = 'name';
         
@@ -20,10 +20,42 @@ eventsApp.controller('EventController',
             .catch(function (response) { console.log(response); })
 
         $scope.upVoteSession = function (session) {
+            var sessionsStored = $cookieStore.get('vote');
+
+            if (typeof sessionsStored === 'undefined') {
+                $cookieStore.put('vote', [session.id]);
+            }
+            else {
+                if (sessionsStored.indexOf(session.id) == -1) {
+                    sessionsStored.push(session.id);
+                    $cookieStore.put('vote', sessionsStored);
+                }
+                else {
+                    alert('You have already voted');
+                    return;
+                }
+            }
+
             session.upVoteCount++;
         };
 
         $scope.downVoteSession = function (session) {
+            var sessionsStored = $cookieStore.get('vote');
+
+            if (typeof sessionsStored === 'undefined') {
+                $cookieStore.put('vote', [session.id]);
+            }
+            else {
+                if (sessionsStored.indexOf(session.id) == -1) {
+                    sessionsStored.push(session.id);
+                    $cookieStore.put('vote', sessionsStored);
+                }
+                else {
+                    alert('You have already voted');
+                    return;
+                }
+            }
+
             session.upVoteCount--;
         };
 
