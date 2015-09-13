@@ -103,6 +103,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\js\controllers\EventListController.js" />
     <Content Include="app\lib\angular\angular-locale_es.js" />
     <Content Include="app\lib\angular\angular-cookies.js" />
     <Content Include="app\index.html" />
@@ -113,8 +114,9 @@
     <Content Include="app\js\controllers\EditEventController.js" />
     <Content Include="app\js\services\GravatarUrlBuilder.js" />
     <Content Include="app\js\services\EventData.js" />
+    <Content Include="templates\EventList.html" />
     <Content Include="templates\NewEvent.html" />
-    <Content Include="app\EventDetails.html" />
+    <Content Include="templates\EventDetails.html" />
     <Content Include="app\img\angularjs-logo.png" />
     <Content Include="app\img\glyphicons-halflings-white.png" />
     <Content Include="app\img\glyphicons-halflings.png" />

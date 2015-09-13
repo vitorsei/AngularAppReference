@@ -18,6 +18,9 @@ eventsApp.factory('eventData', function ($resource) {
         },
         save: function (event) {
             return resource.save(event);
+        },
+        getAllEvents: function () {
+            return resource.query();
         }
     };
 });

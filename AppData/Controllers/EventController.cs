@@ -18,12 +18,30 @@ namespace AppData.Controllers
         
         public JToken Get(string id = null)
         {
-            return JObject.Parse(File.ReadAllText(path + id + ".json"));
+            if (id == null)
+                return GetAllJsonEventsArray();
+            return GetSingleJsonFile(id);
         }
 
         public void Post(JObject eventData)
         {
             File.WriteAllText(path + GetNewId() + ".json", eventData.ToString(Formatting.None));
+        }
+
+        private JArray GetAllJsonEventsArray()
+        {
+            var contents = "";
+            foreach (var file in Directory.GetFiles(path))
+            {
+                contents += File.ReadAllText(file) + ",";
+            }
+
+            return JArray.Parse("[" + contents.Substring(0, contents.Length - 1) + "]");
+        }
+
+        private JToken GetSingleJsonFile(string id)
+        {
+            return JObject.Parse(File.ReadAllText(path + id + ".json"));
         }
 
         private string GetNewId()
