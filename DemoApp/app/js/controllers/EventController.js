@@ -10,14 +10,14 @@ eventsApp.controller('EventController',
             .then(function (event) { $scope.event = event;})
             .catch(function (response) { console.log(response); })
 
-        console.log($route.current.params.foo);
-        console.log($route.current.params.eventId);
-        console.log($route.current.pathParams.eventId);
-        console.log($route.current.pathParams.foo);
+        //console.log($route.current.params.foo);
+        //console.log($route.current.params.eventId);
+        //console.log($route.current.pathParams.eventId);
+        //console.log($route.current.pathParams.foo);
 
-        $scope.reload = function () {
-            $route.reload();
-        }
+        //$scope.reload = function () {
+        //    $route.reload();
+        //}
 
         $scope.upVoteSession = function (session) {
             session.upVoteCount++;
