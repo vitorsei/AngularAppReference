@@ -5,10 +5,12 @@ eventsApp.controller('EventController',
 
         $scope.sortOrder = 'name';
 
-        eventData.getEvent($routeParams.eventId)
-            .$promise
-            .then(function (event) { $scope.event = event;})
-            .catch(function (response) { console.log(response); })
+        $scope.event = $route.current.locals.event;
+
+        //eventData.getEvent($routeParams.eventId)
+        //    .$promise
+        //    .then(function (event) { $scope.event = event;})
+        //    .catch(function (response) { console.log(response); })
 
         //console.log($route.current.params.foo);
         //console.log($route.current.params.eventId);
