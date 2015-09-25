@@ -12,10 +12,11 @@
     
     <div class="container">
         
-        <div class="navbar">
+        <div class="navbar" ng-controller="MainMenuController">
             <div class="navbar-inner">
                 <ul class="nav">
-                    <li><a href="newEvent">Create Event</a></li>
+                    <!--<li><a href="newEvent">Create Event</a></li>-->
+                    <li><a href="#" ng-click="createEvent()">Create Event</a></li>
                 </ul>
             </div>
         </div>       
@@ -33,6 +34,7 @@
     <script src="app/js/controllers/EventController.js"></script>
     <script src="app/js/controllers/EditEventController.js"></script>
     <script src="app/js/controllers/EventListController.js"></script>
+    <script src="app/js/controllers/MainMenuController.js"></script>
     <script src="app/js/services/EventData.js"></script>
     <script src="app/js/filters.js"></script>
 </body>
