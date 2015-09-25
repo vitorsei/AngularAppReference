@@ -18,3 +18,5 @@
 /// <reference path="../app/lib/angular/angular-locale_es.js" />
 /// <reference path="../app/lib/angular/angular-cookies.js" />
 /// <reference path="../app/js/controllers/eventlistcontroller.js" />
+/// <reference path="../app/js/controllers/MainMenuController.js" />
+/// <reference path="../app/js/directives/eventThumbnail.js" />
