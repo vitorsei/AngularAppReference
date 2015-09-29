@@ -20,3 +20,4 @@
 /// <reference path="../app/js/controllers/eventlistcontroller.js" />
 /// <reference path="../app/js/controllers/MainMenuController.js" />
 /// <reference path="../app/js/directives/eventThumbnail.js" />
+/// <reference path="../app/js/directives/upvote.js" />
