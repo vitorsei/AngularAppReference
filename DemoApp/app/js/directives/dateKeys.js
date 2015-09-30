@@ -24,7 +24,7 @@ eventsApp.directive('dateKeys', function () {
 
     function isNavigationKeyCode(keyCode) {
         switch (keyCode) {
-            case 8: //backspace
+            case 8: //tab
             case 9: //backspace
             case 35: //end
             case 36: //home
