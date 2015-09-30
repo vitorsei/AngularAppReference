@@ -23,3 +23,4 @@
 /// <reference path="../app/js/directives/upvote.js" />
 /// <reference path="../app/js/directives/dateKeys.js" />
 /// <reference path="../app/js/directives/gravatar.js" />
+/// <reference path="../app/js/directives/collapsible.js" />
