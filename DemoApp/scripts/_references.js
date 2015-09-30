@@ -22,3 +22,4 @@
 /// <reference path="../app/js/directives/eventThumbnail.js" />
 /// <reference path="../app/js/directives/upvote.js" />
 /// <reference path="../app/js/directives/dateKeys.js" />
+/// <reference path="../app/js/directives/gravatar.js" />
