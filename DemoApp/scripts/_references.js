@@ -24,3 +24,5 @@
 /// <reference path="../app/js/directives/dateKeys.js" />
 /// <reference path="../app/js/directives/gravatar.js" />
 /// <reference path="../app/js/directives/collapsible.js" />
+/// <reference path="../app/js/directives/datepicker.js" />
+/// <reference path="../app/lib/jquery-ui-1.11.4.custom/jquery-ui.js" />
