@@ -14,7 +14,7 @@ namespace AppData.Controllers
     [EnableCors(origins: "http://localhost:18774", headers: "*", methods: "*")] 
     public class EventController : ApiController
     {
-        private readonly string path = System.Web.Hosting.HostingEnvironment.MapPath("/") + "App_Data/Event/";
+        private readonly string path = System.Web.Hosting.HostingEnvironment.MapPath("/") + "App_Data\\Event\\";
         
         public JToken Get(string id = null)
         {
